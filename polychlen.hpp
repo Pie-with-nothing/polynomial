@@ -15,9 +15,9 @@ class Poly{
         Poly(std::initializer_list<float> elems);
         Poly(std::initializer_list<double> elems);
         Poly(const Poly &other);
-        Poly(Poly &&other);
+        Poly(Poly &&other)noexcept;
         Poly &operator=(const Poly &another);
-        Poly &operator=(Poly &&another);
+        Poly &operator=(Poly &&another)noexcept;
         ~Poly();
         const double operator[](int index) const;
         double &operator[](int index);
